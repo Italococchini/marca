@@ -1,7 +1,7 @@
 <footer id="footer" class="row text-center">
 	<div class="container">
 		<div style="float:right;width:50%;"> 
-		<article class="col-sm-10  text-left">
+		<article class="col-sm-12  text-left">
 			<h3 class="caviar">Contáctanos</h3>
 			<ul class="list-unstyled">
 				<li class="caviar">+52 (55) 1791.4931</li>

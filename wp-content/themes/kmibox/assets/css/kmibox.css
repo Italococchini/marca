@@ -309,7 +309,11 @@ select{
 }
 
 .caviar{
-	font-family: caviar_dremasregular;
+	font-family: caviar_dreamsregular;
+}
+
+.postone{
+	font-family: PoetsenOne_Regular;
 }
 
 .btn-sm-kmibox-default{
@@ -1035,6 +1039,29 @@ select{
     padding: 20px 20px;
     font-family: caviar_dreamsregular;
 }
+/************* Carrusel prev y next, responsive *****/
+#izquierda {
+    font-size: 20pt;
+    /*background: #a09696;*/
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 8px;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+#derecha {
+    font-size: 20pt;
+    /*background: #a09696;*/
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 8px;
+    margin-top: 10%;
+    margin-left: 55%;    
+}
+
+    
 
 @media only screen and (max-width:598px) {
 	#top div img {
@@ -1159,7 +1186,10 @@ select{
 	#footer{
 		margin-top: 90px;
 	}
+.carro{
 
+	    margin-left: -41%;
+}
 	#como-funciona p {
     	font-size: 18px;
 	}
@@ -1170,6 +1200,11 @@ select{
 		font-size: 12px;
 	}
 	
+	.carro{
+
+	    margin-left: -41%;
+}
+
 	.border-curvo{
 	 border-radius: 100px;
     border: 10px solid #ffffff;
@@ -1236,11 +1271,20 @@ select{
 		background-size: auto; 
 	}
 }
-@media all and (max-width:959px) and (min-width:600px) {
+@media all and (max-width:959px) and (min-width:613px) {
 	.h-3x{
 		font-size: 20px;
 	}
+	.carro{
 
+	    margin-left: -41% !important;
+	}
+	.comprar_box {  
+    position: absolute;
+    top: 0px;  
+    width: 100%;
+    /*height: calc( 100% - 72px )*/;
+}
 	#regalo{
 		width: 20%;
 	}
@@ -1276,14 +1320,7 @@ select{
 	    font-size: 16px!important;
 	}
 }
-/*@media all and (max-width:599px) and (min-width:359px) {
-	.h-3x{
-		font-size: 20px;
-	}
-	}*/
-	
-
-@media (max-width:599px) and (min-width:200px) {
+@media all and (max-width:599px) and (min-width:359px) {
 	#title{
 		font-size: 14px; 
 	}
@@ -1395,12 +1432,10 @@ select{
 	.tamano{
 		width: 250px!important;
 	}
-	#carrousel_2 {
-		margin-left: -95%!important;
-	}
+	
 	#carrousel_2 img {
-	    width: 25%!important;
-	    height: 90%!important;
+	    width: 21%!important;
+	    height: 100%!important;
 	}
 	#nombre_producto {
 	    font-size: 20pt!important;
@@ -1409,7 +1444,286 @@ select{
 	.arriba {
 	    margin-top: -1px;
 	}
+	
+    #izquierda {
+        margin-left: 33%;
+    }
+    #derecha {
+        margin-left: 25%;
+    }
 }
+@media (max-width: 614px) and (min-width: 200px){
+	#title{
+		font-size: 14px; 
+	}
+	#top .container{
+		margin-top: 0px;
+	}
+	#top div img{
+		max-width: 50%;
+	}
+	#top div,
+	#banner{
+		text-align: center; 
+		margin-top: 2vh;
+	}
+	#banner-text {
+    	text-align: center;
+	}
+	#banner-text h2{
+		font-size: 18px;
+		margin-top: 5px;
+	}
+	.btn-kmibox{
+		width: 100%;
+	}
+	.btn-sm-kmibox {
+	   /* font-size: 12px;
+	    padding: 4px!important;*/
+	}
+	#section-comment{
+		background-size: cover;
+	}
+	#section-comment h2{
+		font-size: 21px;
+		margin:0px;
+	}
+
+	.h-3x{
+		font-size: 26px;
+	}
+
+	h2{
+		font-size: 18px;
+	}
+
+	p{
+		font-size: 16px;
+	}
+
+	h2 .subtitle{
+	    font-size: 20px;
+	}
+	h3 .subtitle{
+	    font-size: 19px;
+	}
+
+	.back-picture {
+	    padding: 40px 0px 40px 0px;
+	}
+
+	.logo-text{
+	    width: 36%;
+	}
+
+	#footer h2{
+	    font-size: 20px;
+	}
+	
+	#footer article h3{
+    	font-size: 18px;
+	}
+	#footer ul li {
+    	font-size: 13px;
+	}
+	#social-network li img{
+		width: 40px;
+	}
+	#footer-logo{
+		padding-top:30px;
+		padding-bottom:30px;
+	}
+	#logo img{
+		width: 150px;
+	}
+	#carrousel_responsive {
+	    width: 240%!important;
+	    height: 80%!important;
+	    margin-left: -69%!important;
+	}
+	.comprar_box {
+	    top: -10%!important;
+	}
+
+	.comprar_footer p {
+	    font-size: 11pt;
+	    font-family: PoetsenOne_Regular;
+	    color: #900e9c;
+	    margin-top: 60%;
+	    margin-left: -20%;
+	}
+	#edad-btn {
+	    font-size: 11pt;
+	    margin-top: 530%;
+	    margin-left: -370%;
+	    padding: 4%;
+	}
+	.header_titulo {
+	    font-size: 15px!important;
+	}
+	.tamano{
+		width: 250px!important;
+	}
+	
+	#carrousel_2 img {
+	    width: 20%!important;
+    	height: 85%!important;
+	}
+	#izquierda {
+        margin-left: 39%;
+    	margin-top: 15%;
+    }
+    #derecha {
+        margin-left: 25%;
+        margin-top: 15%;
+    }
+	#nombre_producto {
+	    font-size: 18pt!important;
+	    margin-right: 10%!important;
+	    width: 100%;
+	}
+	.comprar_footer button {
+	    font-size: 15px!important;
+	}
+	.arriba {
+	    margin-top: -1px;
+	}
+
+@media (max-width:599px) and (min-width:200px) {
+	#title{
+		font-size: 14px; 
+	}
+	#top .container{
+		margin-top: 0px;
+	}
+	#top div img{
+		max-width: 50%;
+	}
+	#top div,
+	#banner{
+		text-align: center; 
+		margin-top: 2vh;
+	}
+	#banner-text {
+    	text-align: center;
+	}
+	#banner-text h2{
+		font-size: 18px;
+		margin-top: 5px;
+	}
+	.btn-kmibox{
+		width: 100%;
+	}
+	.btn-sm-kmibox {
+	   /* font-size: 12px;
+	    padding: 4px!important;*/
+	}
+	#section-comment{
+		background-size: cover;
+	}
+	#section-comment h2{
+		font-size: 21px;
+		margin:0px;
+	}
+
+	.h-3x{
+		font-size: 26px;
+	}
+
+	h2{
+		font-size: 18px;
+	}
+
+	p{
+		font-size: 16px;
+	}
+
+	h2 .subtitle{
+	    font-size: 20px;
+	}
+	h3 .subtitle{
+	    font-size: 19px;
+	}
+
+	.back-picture {
+	    padding: 40px 0px 40px 0px;
+	}
+
+	.logo-text{
+	    width: 36%;
+	}
+
+	#footer h2{
+	    font-size: 20px;
+	}
+	
+	#footer article h3{
+    	font-size: 18px;
+	}
+	#footer ul li {
+    	font-size: 13px;
+	}
+	#social-network li img{
+		width: 40px;
+	}
+	#footer-logo{
+		padding-top:30px;
+		padding-bottom:30px;
+	}
+	#logo img{
+		width: 150px;
+	}
+	#carrousel_responsive {
+	    width: 240%!important;
+	    height: 80%!important;
+	    margin-left: -69%!important;
+	}
+	.comprar_box {
+	    top: -10%!important;
+	    height: calc( 100% - 100px ) !important;
+	}
+
+	.comprar_footer p {
+	    font-size: 11pt;
+	    font-family: PoetsenOne_Regular;
+	    color: #900e9c;
+	    margin-top: 60%;
+	    margin-left: -20%;
+	}
+	#edad-btn {
+	    font-size: 11pt;
+	    margin-top: 530%;
+	    margin-left: -370%;
+	    padding: 4%;
+	}
+	.header_titulo {
+	    font-size: 15px!important;
+	}
+	.tamano{
+		width: 250px!important;
+	}
+	
+	#carrousel_2 img {
+	    width: 15%!important;
+	    height: 85%!important;
+	}
+	#izquierda {
+        margin-left: 42%;
+    	margin-top: 18%;
+    }
+    #derecha {
+        margin-left: 19%;
+        margin-top: 18%;
+    }
+	#nombre_producto {
+	    font-size: 20pt!important;
+	    margin-right: 10%!important;
+	}
+	.arriba {
+	    margin-top: -1px;
+	}
+}
+
 
 #contenerdor_carga{
 	background-color: #94d400

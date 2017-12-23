@@ -1,8 +1,8 @@
 <div class="clear"></div>
-<aside class="col-md-6 col-xs-12 hidden col-md-offset-4 alert alert-danger" id="login-mensaje"></aside>
+<aside class="col-md-6 col-xs-12 hidden col-md-offset-3 alert alert-danger" id="login-mensaje"></aside>
 <article id="inicio-sesion" 
 		class="col-md-6 col-xs-12 col-md-offset-4" 
-		style=" background-color: #94d400; height: 600px; margin-left: 25%;">
+		style=" background-color: #94d400; height: 600px; ">
 
 	
 		<div class="col-md-10 col-md-offset-1 form-horizontal">
@@ -34,7 +34,7 @@
 				</div>
 
 				<div class="form-group col-xs-10 text-center caviar" style="margin-bottom: 0px; color: #ffffff">
-					<a style="color: #ffffff;"class="pull-right" href="<?php echo get_home_url(); ?>/recuperar-clave">¿Olvidaste tu contraseña?</a>
+					<a style="color: #ffffff; margin-left: 24%"  href="<?php echo get_home_url(); ?>/recuperar-clave">¿Olvidaste tu contraseña?</a>
 				</div>
 
 				<div class="form-group">

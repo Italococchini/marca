@@ -62,7 +62,16 @@ section {
     background-color: #fff;
     border: 1px solid #fff;
 }
-
+.comprar_descripcion {
+    position: relative;
+    left: 40%;
+    width: 100%;
+    padding: 20px;
+    background: #FFF;
+    top: 80%;
+    font-size: 18pt;
+    z-index: 2;
+}
 .comprar_box {  
     position: absolute;
     top: 0px;  
@@ -71,11 +80,23 @@ section {
 }
 
 .vlz_carrousel {
-	width: 800px;
+	width: 1400px;
     height: 300px;
     margin: 60px auto;
     top: 50%;
     margin-top: -150px;
+}
+
+
+.comprar_descripcion {
+    position: relative;
+    left: 34%;
+    width: 100%;
+    padding: 20px;
+    background: #FFF;
+    top: 80%;
+    font-size: 18pt;
+    z-index: 2;
 }
 
 .vlz_carrousel img {
@@ -124,6 +145,32 @@ table {
 #desglose td.separador {        
     padding: 0px 20px !important;
 }
+
+
+#derecha {
+    font-size: 20pt;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 8px;
+    margin-top: 10%;
+    margin-left: 52%;
+}
+
+
+#izquierda {
+    font-size: 20pt;
+    /* background: #a09696; */
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 8px;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+
+
 
 #totales{
 	overflow: hidden;
@@ -186,13 +233,13 @@ td.style_total {
 	overflow: auto !important;
 }
 
-#nombre_producto{
-	font-size: 50px;
+#nombre_producto {
+    font-size: 50px;
     color: #94d400;
     font-weight: 800;
     font-family: caviar_dreamsregular;
     display: inline-block;
-    margin-right: 50px;
+    margin-right: 78px;
 }
 
 #no_aparece {
@@ -216,10 +263,9 @@ span.separador_presentacion {
 	display: block;
 	margin: 0px auto;
 	max-width: 900px;
-    overflow: hidden;
     height: 420px;
-
-    top: 50%;
+    width: 100%;
+    top: 46%;
     margin-top: -210px;
 }
 
@@ -354,41 +400,120 @@ span.separador_presentacion {
     padding: 0px;
 }
 
+.vlz_carrousel {
+    width: 1400px;
+    height: 300px;
+    margin: 60px auto;
+    top: 50%;
+    margin-top: -150px;
+}
+
+
+.comprar_descripcion {
+    position: relative;
+    left: 24%;
+    width: 100%;
+    padding: 20px;
+    background: #FFF;
+    top: 80%;
+    font-size: 18pt;
+    z-index: 2;
+}
+#derecha {
+    font-size: 20pt;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 8px;
+    margin-top: 10%;
+    margin-left: 55%;
+}
+#izquierda {
+    font-size: 20pt;
+    /* background: #a09696; */
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 8px;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
 }  
 @media all and (max-width:959px) and (min-width:600px) {
     table #desglose {
-    width: 50%;
-    font-family: caviar_dreamsregular;
-}
-.cintillo_factura #cen {
-    height: 15px;
-    margin: 25px auto;
-}
-.cintillo_factura #der {
-    /* float: right; */
-    height: 50px;
-    margin: 20px;
-}
-
-.cintillo_factura #izq {
-    /* float: left; */
-    height: 50px;
-    margin: 20px;
-}
-
-#desglose th{    
-    text-align: left;
-    background-color: #930e9e;
-    color: #FFF;
-    padding: 10px 10px;
-    font-size: 9px;
-}
-
-#desglose td {    
-    padding: 0px;
-}
-
+        width: 50%;
+        font-family: caviar_dreamsregular;
     }
+    .cintillo_factura #cen {
+        height: 15px;
+        margin: 25px auto;
+    }
+    .cintillo_factura #der {
+        /* float: right; */
+        height: 50px;
+        margin: 20px;
+    }
+
+    .cintillo_factura #izq {
+        /* float: left; */
+        height: 50px;
+        margin: 20px;
+    }
+
+    #desglose th{    
+        text-align: left;
+        background-color: #930e9e;
+        color: #FFF;
+        padding: 10px 10px;
+        font-size: 9px;
+    }
+
+    #desglose td {    
+        padding: 0px;
+    }
+
+    .vlz_carrousel {
+     width: 1400px;
+    height: 300px;
+    margin: 60px auto !important;
+    top: 39% !important;
+    margin-top: -74px;
+    margin-left: -22% !important;
+    }
+
+
+    .comprar_descripcion {
+    position: relative;
+    left: 24%;
+    width: 100%;
+    padding: 20px;
+    background: #FFF;
+    top: 133% !important;
+    font-size: 18pt;
+    z-index: 2;
+    }
+    #derecha {
+        font-size: 20pt;
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        padding: 8px;
+        margin-top: 10%;
+        margin-left: 38%;
+    }
+    #izquierda {
+        font-size: 20pt;
+        /* background: #a09696; */
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        padding: 8px;
+        margin-top: 10%;
+        margin-left: 20%;
+    }
+    
+}
 
 @media (max-width:599px) and (min-width:200px) {
   
@@ -423,8 +548,238 @@ span.separador_presentacion {
     #desglose td {    
         padding: 0px;
     }
+    .comprar_descripcion {
+        position: relative;
+        left: 8%;
+        width: 100%;
+        padding: 20px;
+        background: #FFF;
+        top: 77%;
+        font-size: 14pt;
+        z-index: 2;
+    }
+
+
+    .vlz_carrousel {
+    width: 1400px;
+    height: 300px;
+    margin: 60px auto;
+    top: 50%;
+    margin-top: -150px;
+}
+
+
+.comprar_descripcion {
+    position: relative;
+    left: 24%;
+    width: 100%;
+    padding: 20px;
+    background: #FFF;
+    top: 80%;
+    font-size: 18pt;
+    z-index: 2;
+}
+#derecha {
+    font-size: 20pt;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 8px;
+    margin-top: 10%;
+    margin-left: 55%;
+}
+#izquierda {
+    font-size: 20pt;
+    /* background: #a09696; */
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 8px;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+.comprar_box {  
+    position: absolute;
+    top: 0px;  
+    width: 100%;
+    height: calc( 100% - 72px );
+}
 
 }
+
+
+@media (max-width: 614px) and (min-width: 200px){
+
+    .vlz_carrousel {
+        width: 1400px;
+    height: 300px;
+    margin: 60px auto;
+    top: 60%;
+    margin-top: -6px;
+    margin-left: -132%; 
+    }
+
+
+    .comprar_descripcion {
+            position: relative;
+        left: 7% !important;
+        width: 100%;
+        padding: 20px;
+        background: #FFF;
+        top: 80%;
+        font-size: 18pt;
+        z-index: 2;
+        margin-left: -4% !important;
+    }
+    #derecha {
+        font-size: 20pt;
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        padding: 8px;
+        margin-top: 18%;
+        margin-left: 17% !important;
+    }
+    #izquierda {
+              width: 1400px;
+    height: 300px;
+    margin: 60px auto;
+    top: 60%;
+    margin-top: -6px;
+    margin-left: -132%;
+    }
+
+}
+
+
+@media all and (max-width:599px) and (min-width:359px){
+    #plan > div {
+        position: relative;
+        display: block;
+        margin: 0px auto;
+        max-width:  469px;
+        overflow: unset !important;
+        height: 420px !important;
+        top: 50%;
+        margin-top: -250px;
+        width: 100%;
+    }
+
+    .comprar_footer {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        padding: 30px 15px;
+        background: #FFF;
+        #border-top: solid 3px;
+        text-align: center;
+    }
+    
+
+
+
+
+}
+
+@media all and (max-width:620px) and (min-width:490px){
+    #plan > div {
+    position: relative;
+    display: block;
+    margin: 0px auto;
+    max-width:  469px;
+    overflow: unset !important;
+    height: 420px !important;
+    top: 50%;
+    margin-top: -250px;
+    width: 100%
+    }
+
+    .vlz_carrousel {
+      width: 1400px;
+        height: 300px;
+        /* margin: 60px auto; */
+        top: 50%;
+        margin-top: -30px;
+        margin-left: -68%;
+    }
+
+
+    .comprar_descripcion {
+          position: relative;
+    left: 10%;
+    width: 100%;
+    padding: 20px;
+    background: #FFF;
+    top: 89% !important;
+    font-size: 18pt;
+    z-index: 2;
+    }
+    #derecha {
+        font-size: 20pt;
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        padding: 8px;
+        margin-top: 7%;
+        margin-left: 27%;
+    }
+    #izquierda {
+            font-size: 20pt;
+    /* background: #a09696; */
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 8px;
+    margin-top: 10%;
+    margin-left: 31% !important;
+    }
+
+}
+
+@media (max-width: 991px) and (min-width: 768px){
+    .vlz_carrousel {
+             width: 1400px;
+    height: 300px;
+    margin: 60px auto;
+    top: 62%;
+    margin-top: -24%;
+    margin-left: -38% !important;
+    }
+
+    .comprar_descripcion {
+        position: relative;
+        left: 24%;
+        width: 100%;
+        padding: 20px;
+        background: #FFF;
+        top: 80%;
+        font-size: 18pt;
+        z-index: 2;
+    }
+    #derecha {
+          font-size: 20pt;
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        padding: 8px;
+        margin-top: 10%;
+        margin-left: 37%;
+    }
+    #izquierda {
+            font-size: 20pt;
+        /* background: #a09696; */
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        padding: 8px;
+        margin-top: 10%;
+        margin-left: 27%;
+    }
+}
+   
+
 
 #content-primary {
     padding-top: 0px !important;

@@ -65,7 +65,7 @@
 
 	<!-- Plantilla de Pago -->
 
-	<article id="pagar" class="col-md-10 col-xs-12 col-md-offset-1 text-center" style="border-radius:30px;padding:20px; margin-top:0%;border:1px solid #ccc;">
+	<article id="pagar" class="col-md-10 col-xs-12 col-md-offset-1 text-center" style="border-radius:30px;padding:20px; margin-top:7%;border:1px solid #ccc; margin-left: -2%;">
 
 		<div class="col-md-8 col-md-offset-2">
 			<form class="form-horizontal" method="post" action="#" id="form-pago" >
@@ -73,7 +73,7 @@
 				<input type="hidden" name="redirect" value="<?php echo get_home_url(); ?>/pagar-mi-kmibox">
 
 			  <div class="form-group">
-			    <label for="inputEmail3" class="col-sm-4 control-label caviar">Titular</label>
+			    <label for="inputEmail3" class="col-sm-4 control-label caviar" >Titular</label>
 			    <div class="col-sm-8">
 			      <input type="text" name="holder_name" 
 			      	class="form-control  <?php echo $disabled; ?> " 
@@ -94,7 +94,7 @@
 			  </div>
 
 			  <div class="form-group">
-			    <label for="inputPassword3" class="col-sm-4 control-label caviar">Fecha vencimiento</label>
+			    <label for="inputPassword3" class="col-sm-4 control-label caviar" >Fecha vencimiento</label>
 			    <div class="col-sm-4">
 			    	<select name="exp_month" class="form-control  <?php echo $disabled; ?> " <?php echo $disabled; ?> >
 			    		<option>Mes</option>
@@ -116,14 +116,14 @@
 			  </div>
 
 			  <div class="form-group">
-			    <label for="inputPassword3" class="col-sm-4 control-label caviar">CVV</label>
+			    <label for="inputPassword3" class="col-sm-4 control-label caviar" >CVV</label>
 			    <div class="col-sm-8">
 			      <input type="text" name="cvv" class="form-control  <?php echo $disabled; ?> " <?php echo $disabled; ?>  id="inputPassword3" placeholder="CVV" maxlength="3" data-charset="num" >
 			    </div>
 			  </div>
 
 			  <div class="form-group">
-			    <label for="inputPassword3" class="col-sm-4 control-label caviar">Total a pagar</label>
+			    <label for="inputPassword3" class="col-sm-4 control-label caviar" >Total a pagar</label>
 			    <div class="col-sm-8">
 			      <input type="text" readonly class="form-control disabled" id="inputPassword3" value="$<?php echo number_format($CARRITO["total"], 2, ',', '.'); ?>">
 			    </div>
@@ -132,13 +132,13 @@
 			  <div class="form-group">
 			    <div class="col-sm-offset-4	col-sm-4">
 
-			      <a href="<?php echo get_home_url(); ?>/quiero-mi-kmibox" class="btn  <?php echo (isset($hidden))? '' : 'hidden' ; ?>  btn-sm-kmibox" id="btn_pagar_2 caviar">Realizar Pago</a>
+			      <a href="<?php echo get_home_url(); ?>/quiero-mi-kmibox" class="btn  <?php echo (isset($hidden))? '' : 'hidden' ; ?>  btn-sm-kmibox" id="btn_pagar_2 caviar" >Realizar Pago</a>
 
 			      <button id="btn_pagar_1" type="submit" class="btn caviar <?php echo (isset(
-			      	$hidden))? 'hidden' : '' ; ?> btn-sm-kmibox" style="padding: 10px 30px 10px 30px;">Realizar Pago</button>
+			      	$hidden))? 'hidden' : '' ; ?> btn-sm-kmibox" style="padding: 10px 30px 10px 30px;"">Realizar Pago</button>
 			    </div>
 				<div class="col-sm-3">
-			      <a href="<?php echo get_home_url(); ?>/" class="btn btn-sm-kmibox caviar">Cancelar</a>
+			      <a href="<?php echo get_home_url(); ?>/" class="btn btn-sm-kmibox caviar" >Cancelar</a>
 			    </div>
 			  </div>
 
