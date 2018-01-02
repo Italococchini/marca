@@ -137,35 +137,14 @@
 								<div  class="col-md-12">Small Bites Adulto</div>
 							</div>
 						</article>
-						<article class="col-xs-6 col-md-3 text-center" data-text="Tier Holistic">
-							<div class="col-xs-12">
-								<img src="'.get_home_url().'/img/productos/Tier-holistic.png" width="70%" class="img-responsive" id=""/>
-								<div  class="col-md-12"><strong>Tier Holistic</strong></div>
-								<div  class="col-md-12">Small Bites Adulto</div>
-							</div>
-						</article>
-						<article class="col-xs-6 col-md-3 text-center" data-text="Tier Holistic">
-							<div class="col-xs-12">
-								<img src="'.get_home_url().'/img/productos/Tier-holistic.png" width="70%" class="img-responsive" id=""/>
-								<div  class="col-md-12"><strong>Tier Holistic</strong></div>
-								<div  class="col-md-12">Small Bites Adulto</div>
-							</div>
-						</article>
-						<article class="col-xs-6 col-md-3 text-center" data-text="Tier Holistic">
-							<div class="col-xs-12">
-								<img src="'.get_home_url().'/img/productos/Tier-holistic.png" width="70%" class="img-responsive" id=""/>
-								<div  class="col-md-12"><strong>Tier Holistic</strong></div>
-								<div  class="col-md-12">Small Bites Adulto</div>
-							</div>
-						</article>
-   
+						
 					</div>
 				</article>
 
 				<article class="section-seleccion">
 					<div class="container">
-						<h1 data-target="producto_name">ROYAL CANIN</h1>
-						<h2>Raza mediana adulto <span>13.7 KG</span></h2>
+						<h1 class="producto_name" data-target="producto_name">ROYAL CANIN</h1>
+						<h2 class="producto_descripcion">Raza mediana adulto <span>13.7 KG</span></h2>
 						<div>
 							<span>Presentaci&oacute;n: </span>
 							<div class="selector_presentaciones2">

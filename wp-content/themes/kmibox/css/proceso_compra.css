@@ -373,10 +373,32 @@ html, body, #content-primary, .comprar_container, .comprar_container section {
     text-transform: UPPERCASE;
     cursor: pointer;
 }
-
 .selector_presentaciones2{
 	display: inline-block;	
 }
+
+.producto_name {
+    font-size: 55px;
+    font-family: "Gothan Medium";
+    margin:0px;
+    color: #9Bff00;
+    font-weight: bold;
+}
+.producto_descripcion{
+    font-weight: bold;
+	font-family: "Gothan Medium";
+    font-size: 25px;
+    margin-top: 0px;
+    color: #181E0D;
+    text-transform: uppercase;
+}
+.producto_descripcion span{
+    color: #FFBC19;
+    text-transform: uppercase;
+}
+
+
+
 
 /* Fase 3 */
 
