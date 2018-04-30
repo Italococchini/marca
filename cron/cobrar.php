@@ -1,13 +1,16 @@
 <?php
 	include '../wp-load.php';
+	include( "../wp-content/themes/kmibox/lib/payu/PayU.php" );
+	include( "../wp-content/themes/kmibox/lib/payu/validarTDC.php" );
 
 	global $wpdb;
 
+	$payu = new PayU();
+
+	$data = [];
 	$time = strtotime("+1 day");
 	$hoy = date("Y-m-d", $time );
 	$cobros = $wpdb->get_results("SELECT * FROM cobros WHERE fecha_cobro = '{$hoy}' AND status = 'Pendiente' ");
-
-$dev[] = 'paso1';
 
 	foreach ($cobros as $cobro) {
 		$suscripcion = $wpdb->get_row("SELECT * FROM items_ordenes WHERE id = {$cobro->item_orden}");
@@ -16,9 +19,7 @@ $dev[] = 'paso1';
 		
 		// Primera suscripcion
 		$primeraSuscripcion = getPrimeraSuscripcion( $suscripcion->id_orden );
-
-$dev[] = $orden;
-
+ 
 		// Metadata Cobro y Cupones 
 		$total = $suscripcion->total;
 	
@@ -45,64 +46,47 @@ $dev[] = $orden;
 			crearNewCobro($cobro->item_orden, $time);
 			exit();
 		}
+
 		$data = unserialize( $orden->metadata );
+
 		$error = "";
 
 		try {
 
 			// Openpay - Data del Cliente			
-			 	/*
-			 	$openpay = Openpay::getInstance($dataOpenpay["MERCHANT_ID"], $dataOpenpay["OPENPAY_KEY_SECRET"]);
-		 		Openpay::setProductionMode( $dataOpenpay["OPENPAY_PRUEBAS"] != 1 );
-			 	try {
-					$customer = $openpay->customers->get($openpay_cliente_id);
-				} catch (Exception $e) { 
-		        	$error = $e->getErrorCode()." - ".$e->getDescription();
-				    $data = array(
-				    	"error" => $error
-				    );
-				    $data = serialize($data);
-		        	$wpdb->query("UPDATE cobros SET data = '{$data}' WHERE id = {$cobro->id};");
-	        	}
-				*/
-
-			$producto = $wpdb->get_row("SELECT * FROM productos WHERE id = ".$suscripcion->id_producto);
-			
-			// parametros
-				$user_id = $orden->cliente;
-				$email 	= $wpdb->get_var("SELECT user_email FROM wp_users WHERE ID = {$user_id}");
-				$nombre = get_user_meta($user_id, "first_name", true)." ".get_user_meta($user_id, "last_name", true);
-				$_direccion = get_user_meta( $user_id, 'dir_calle', true );
-				$_ciudad = get_user_meta( $user_id, 'dir_ciudad', true );
-				$_estado = get_user_meta( $user_id, 'dir_estado', true );
-				$_telefono  = get_user_meta( $user_id, 'telef_movil', true );
-				$descripcion = "Cobro de: ".$suscripcion->cantidad." - ".$producto->nombre." ( ".$producto->descripcion." )";
-				$tipoCobro = 'CobroSuscripcion';
-				$CARRITO["total"] = (float) $total;
-
+			 	
+				// $openpay = Openpay::getInstance($dataOpenpay["MERCHANT_ID"], $dataOpenpay["OPENPAY_KEY_SECRET"]);
+				// Openpay::setProductionMode( $dataOpenpay["OPENPAY_PRUEBAS"] != 1 );
+				// try {
+				//	 $customer = $openpay->customers->get($openpay_cliente_id);
+				// } catch (Exception $e) { 
+				//	 $error = $e->getErrorCode()." - ".$e->getDescription();
+				//	 $data = array( "error" => $error );
+				//	 $data = serialize($data);
+				//	 $wpdb->query("UPDATE cobros SET data = '{$data}' WHERE id = {$cobro->id};");
+				// }
+ 
 			if( $data["tipo_pago"] == "Tarjeta" && $error == "" ){
-				
-				try {
-					$card_id = ( isset($data["card_id"]) && !empty($data["card_id"]) )? $data["card_id"] : '' ;
-$dev[] =  'paso tarjeta';
-					// Agregar el cobro
-					$respuesta = '';
-					include_once( "../wp-content/themes/kmibox/procesos/compra/pasarelas/payu/tarjeta.php" );
-$dev[]['respuesta'] = $respuesta; 					
-					if( isset($respuesta["activo"]) && $respuesta["activo"] == 1  ){
-						$wpdb->query("UPDATE cobros SET payu_transaccion_id = '".$respuesta['transaccion']."', status = 'Pagado' WHERE id = {$cobro->id};");
-						crearNewCobro($cobro->item_orden, $time);
-$dev[] =  'nuevo cobro tajeta';						
-					}
-				} catch (Exception $e) {
-		        	$error = $e->getErrorCode()." - ".$e->getDescription();
-				    $data = array(
-				    	"error" => $error
-				    );
-				    $data = serialize($data);
-		        	$wpdb->query("UPDATE cobros SET data = '{$data}' WHERE id = {$cobro->id};");
-$dev[] = $error;
-			    }
+			
+				$PayuP = unserialize($data['payu_metadata']);
+				$charge = $payu->cobroTokenTDC( $PayuP );
+	            $state = $charge->transactionResponse->state;
+
+				$respuesta["state"] = $state;
+				$respuesta["charge"] = $charge;
+
+            	if( $state == 'APPROVED' ){
+					$respuesta["transaccion"] = $charge->transactionResponse->transactionId;
+					$respuesta["tarjeta"] = $card_id;
+					$respuesta["activo"] = 1;
+
+					$wpdb->query("UPDATE cobros SET openpay_transaccion_id = '".$respuesta['transaccion']."', status = 'Pagado' WHERE id = {$cobro->id};");
+					crearNewCobro($cobro->item_orden, $time);					
+	            }else{            	
+					// $state == 'PENDING_TRANSACTION_REVIEW' || 
+					// $state == 'PENDING_TRANSACTION_CONFIRMATION' ||
+					// $state == 'PENDING_TRANSACTION_TRANSMISSION' ||
+	            } 
 			}
 
 			if( $data["tipo_pago"] == "Tienda" && $error == "" ){
@@ -161,10 +145,7 @@ $dev[] = $error;
 		    $data = serialize($data);
         	$wpdb->query("UPDATE cobros SET data = '{$data}' WHERE id = {$cobro->id};");
 	    }
-
+		
 	}
 
-	echo '<pre>';
-	print_r($dev);
-	echo '</pre>';
 ?>
