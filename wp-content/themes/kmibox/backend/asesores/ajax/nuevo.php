@@ -8,16 +8,16 @@
 	if( !isset($exite->id) ){
 
 		$wpdb->query("
-			INSERT INTO asesores VALUES (
-				NULL,
+			INSERT INTO asesores (
+				codigo_asesor,
+				nombre,
+				email,
+				telefono
+				) VALUES (
 				'$codigo',
 				'$nombre',
 				'$email',
-				'$telefono',
-				0,
-				0,
-				0,
-				0
+				'$telefono'
 			)
 		");
 		
